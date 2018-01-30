@@ -60,17 +60,27 @@ public class Cuenta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
-    public String Ingreso() {
+    public String ingreso() {
         Scanner S = new Scanner(System.in);
-        int num;
+        double num;
         System.out.print("Introduce cuánto desea ingresar: ");
-        num = S.nextInt();
+        num = S.nextDouble();
         saldo = num + saldo;
-        return "Cuenta{" + saldo + '}';
+        return "Usted ha ingresado " + num + " de saldo a su cuenta, ahora su cuenta actual es " + saldo;
     }
-    public String Reintegro() {
-        return "Cuenta{" + "nombre_cliente=" + nombre_cliente + ", num_cuenta=" + num_cuenta + ", interes=" + interes + ", saldo=" + saldo + '}';
+    public String reintegro() {
+        Scanner S = new Scanner(System.in);
+        double retirar;
+        System.out.print("Introduce cuánto deseas retirar: ");
+        retirar = S.nextDouble();
+        if (retirar < saldo){
+            retirar = saldo - retirar;
+        }else{
+            return "La cantidad que desea retirar es demasiado grande, el saldo actual es de " + saldo;
+        }
+        return "Cuenta{Su saldo actual es de " + retirar + '}';
     }
-     
+     public String transferencia() {
+        return "Su saldo actual es de " + saldo;
+    }
 }
