@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
 
-        
+        Ejercicio3 ejercicio = new Ejercicio3();
         // Fichero del que queremos leer
         File fichero;
         fichero = new File("ejercicio3_lectura.txt");
@@ -30,7 +30,7 @@ public class Ejercicio3 {
                 int convalidadas = 0;
                 String alumno = scanner.nextLine(); 	// Guardamos la linea en un String
                 String[] valor = alumno.split(" ");
-                imprimirBoletin(aprobadas, suspendidas, convalidadas, fichero2, valor);
+                ejercicio.imprimirBoletin(aprobadas, suspendidas, convalidadas, fichero2, valor);
             }
             fichero2.close();
 
@@ -48,10 +48,7 @@ public class Ejercicio3 {
         }
     }
 
-    public static void imprimirBoletin(int aprobadas, int suspendidas, int convalidadas, FileWriter fichero, String[] valor) {
-        aprobadas = 0;
-        suspendidas = 0;
-        convalidadas = 0;
+    private void imprimirBoletin(int aprobadas, int suspendidas, int convalidadas, FileWriter fichero, String[] valor) {
         Calendar calendario = Calendar.getInstance();
         int dia = calendario.get(Calendar.DAY_OF_MONTH);
         int mes = calendario.get(Calendar.MONTH+1);
