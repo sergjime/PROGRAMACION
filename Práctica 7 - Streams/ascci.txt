@@ -1,2 +1,0 @@
-char c = (char)83; 
-c ahora tiene como valor 'S' 
