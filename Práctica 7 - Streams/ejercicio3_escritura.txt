@@ -20,7 +20,7 @@ Nº de módulos suspendidos: 1
 Nº de módulos convalidados: 1
 ------------------------------------------
 
-Fecha: 28/13/2018
+Fecha: 29/13/2018
 Lugar: Palma de Mallorca
 
 
@@ -44,7 +44,7 @@ Nº de módulos suspendidos: 1
 Nº de módulos convalidados: 0
 ------------------------------------------
 
-Fecha: 28/13/2018
+Fecha: 29/13/2018
 Lugar: Palma de Mallorca
 
 
@@ -68,7 +68,7 @@ Nº de módulos suspendidos: 0
 Nº de módulos convalidados: 0
 ------------------------------------------
 
-Fecha: 28/13/2018
+Fecha: 29/13/2018
 Lugar: Palma de Mallorca
 
 
@@ -92,7 +92,7 @@ Nº de módulos suspendidos: 0
 Nº de módulos convalidados: 1
 ------------------------------------------
 
-Fecha: 28/13/2018
+Fecha: 29/13/2018
 Lugar: Palma de Mallorca
 
 

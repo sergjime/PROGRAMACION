@@ -14,6 +14,7 @@ public class Ejercicio1 {
     public static void main(String[] args) {
 
         int contador = 0;
+        Ejercicio1 ejercicio = new Ejercicio1();
         // Fichero del que queremos leer
         File fichero;
         fichero = new File("ejercicio1_lectura.txt");
@@ -36,7 +37,7 @@ public class Ejercicio1 {
                 String edad = parte[2];
                 if (Integer.parseInt(edad) > 17) {
                     contador++;
-                    imprimirAlumnos(nombre, apellido, edad, fichero2, contador);
+                    ejercicio.imprimirAlumnos(nombre, apellido, edad, fichero2, contador);
                 }
             }
             fichero2.close();
@@ -63,7 +64,7 @@ public class Ejercicio1 {
      * @param fichero2 Es el fichero en donde se va a escribir los datos de los alumnos mayores de 17 años
      * @param contador Es el número del alumno recogido para escribir en el fichero
      */
-    public static void imprimirAlumnos(String nombre, String apellido, String edad, FileWriter fichero2, int contador) {
+    private void imprimirAlumnos(String nombre, String apellido, String edad, FileWriter fichero2, int contador) {
 
         try {
             fichero2.append("---- Alumno nº" + contador + " ------- \n");
