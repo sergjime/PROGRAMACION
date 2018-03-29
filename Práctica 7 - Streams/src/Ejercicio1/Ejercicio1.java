@@ -4,9 +4,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author Sergio
+ * @version NetBeans IDE 8.2
+ */
 public class Ejercicio1 {
-
+    
     public static void main(String[] args) {
 
         int contador = 0;
@@ -18,17 +22,14 @@ public class Ejercicio1 {
         Scanner s = null;
 
         try {
-            // Leemos el contenido del fichero
-            System.out.println("... Leemos el contenido del fichero ...");
             s = new Scanner(fichero);
             fichero2 = new FileWriter("ejercicio1_escritura.txt");
             fichero2.append("-------------------------- \n");
             fichero2.append("Listado de alumnos \n");
             fichero2.append("-------------------------- \n");
-            // Leemos linea a linea el fichero
+            // Leemos linea a linea el fichero y extraemos cada valor separado por un espacio
             while (s.hasNextLine()) {
                 String linea = s.nextLine(); 	// Guardamos la linea en un String
-                System.out.println(linea);      // Imprimimos la linea
                 String[] parte = linea.split(" ");
                 String nombre = parte[0];
                 String apellido = parte[1];
@@ -53,7 +54,15 @@ public class Ejercicio1 {
             }
         }
     }
-
+    
+    /**
+     * 
+     * @param nombre Es el nombre del alumno recogido de la línea del fichero
+     * @param apellido Es el apellido del alumno recogido de la línea del fichero
+     * @param edad Es la edad del alumno recogida de la línea del fichero
+     * @param fichero2 Es el fichero en donde se va a escribir los datos de los alumnos mayores de 17 años
+     * @param contador Es el número del alumno recogido para escribir en el fichero
+     */
     public static void imprimirAlumnos(String nombre, String apellido, String edad, FileWriter fichero2, int contador) {
 
         try {
